@@ -12,7 +12,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class GoogleBookApiIntegrationTest {
-    public static final String GOOGLE_BOOK_API_URI = "https://www.googleapis.com/books/v1/volumes/";
+    public static final String GOOGLE_BOOK_API_URI = "https://www.googleapis.com/books/v1/volumes";
     public static final String PRICE_AND_PREJUDICE_VOLUME_ID = "s1gVAAAAYAAJ";
     private HttpClient httpClient;
 
@@ -26,7 +26,7 @@ public class GoogleBookApiIntegrationTest {
     void search_volumeById_returnsTheVolume() {
         var expected = HttpStatus.OK;
         HttpStatus actual = null;
-        var resourcePath = String.format("%s%s", GOOGLE_BOOK_API_URI, PRICE_AND_PREJUDICE_VOLUME_ID);
+        var resourcePath = String.format("%s/%s", GOOGLE_BOOK_API_URI, PRICE_AND_PREJUDICE_VOLUME_ID);
         var httpRequest = HttpRequest.newBuilder()
                 .uri(URI.create(resourcePath))
                 .GET()

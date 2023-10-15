@@ -1,4 +1,4 @@
-package org.ryanmoussouni.bookfinder.domain;
+package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,8 +1,8 @@
-package org.ryanmoussouni.bookfinder.domain;
+package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Pdf{
+public class Epub{
 
 	@JsonProperty("isAvailable")
 	private boolean isAvailable;

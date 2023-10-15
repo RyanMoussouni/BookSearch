@@ -1,7 +1,11 @@
-package org.ryanmoussouni.bookfinder.domain;
+package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.ryanmoussouni.bookfinder.domain.googlebooks.ImageLinks;
+import org.ryanmoussouni.bookfinder.domain.googlebooks.IndustryIdentifiersItem;
+import org.ryanmoussouni.bookfinder.domain.googlebooks.PanelizationSummary;
+import org.ryanmoussouni.bookfinder.domain.googlebooks.ReadingModes;
 
 public class VolumeInfo{
 

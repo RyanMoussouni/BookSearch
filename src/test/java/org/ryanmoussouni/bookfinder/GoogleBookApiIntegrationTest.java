@@ -41,4 +41,25 @@ public class GoogleBookApiIntegrationTest {
 
         Assertions.assertEquals(actual, expected);
     }
+
+    @Test
+    void search_volumeByTitle_returnsSomething() {
+        var expected = HttpStatus.OK;
+        HttpStatus actual = null;
+        var titleQuery = "intitle:the+old+man+and+the+sea";
+        var uri = String.format("%s?q=%s&key=%s", GOOGLE_BOOK_API_URI, titleQuery, GOOGLE_BOOK_API_KEY);
+        var httpRequest = HttpRequest.newBuilder()
+                .uri(URI.create(uri))
+                .GET()
+                .build();
+
+        try {
+            var response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            actual = HttpStatus.valueOf(response.statusCode());
+        } catch (IOException | InterruptedException ie) {
+            Assertions.fail("Error sending the request");
+        }
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

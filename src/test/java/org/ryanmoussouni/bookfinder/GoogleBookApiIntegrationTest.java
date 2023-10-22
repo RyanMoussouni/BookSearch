@@ -1,8 +1,11 @@
 package org.ryanmoussouni.bookfinder;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.ryanmoussouni.bookfinder.domain.googlebooks.Volumes;
 import org.springframework.http.HttpStatus;
 
 import java.io.IOException;
@@ -62,4 +65,13 @@ public class GoogleBookApiIntegrationTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void search_volumeByTitle_returnsAListOfVolumes() {
+        var titleQuery = "intitle:the+old+man+and+the+sea";
+        var uri = String.format("%s?q=%s&key=%s", GOOGLE_BOOK_API_URI, titleQuery, GOOGLE_BOOK_API_KEY);
+        var httpRequest = HttpRequest.newBuilder()
+                .uri(URI.create(uri))
+                .GET()
+                .build();
 }

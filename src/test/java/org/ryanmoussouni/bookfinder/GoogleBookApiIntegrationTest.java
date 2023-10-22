@@ -46,7 +46,7 @@ public class GoogleBookApiIntegrationTest {
     }
 
     @Test
-    void search_volumeByTitle_returnsSomething() {
+    void list_volumeByTitle_returnsSomething() {
         var expected = HttpStatus.OK;
         HttpStatus actual = null;
         var titleQuery = "intitle:the+old+man+and+the+sea";
@@ -68,6 +68,7 @@ public class GoogleBookApiIntegrationTest {
 
     @Test
     void search_volumeByTitle_returnsAListOfVolumes() {
+    void list_volumeByTitle_returnsAListOfVolumes() {
         var titleQuery = "intitle:the+old+man+and+the+sea";
         var uri = String.format("%s?q=%s&key=%s", GOOGLE_BOOK_API_URI, titleQuery, GOOGLE_BOOK_API_KEY);
         var httpRequest = HttpRequest.newBuilder()

@@ -1,150 +1,152 @@
 package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 
+import java.util.List;
+
+@Builder
 @JsonIgnoreProperties
-public class VolumeInfo{
+public class VolumeInfo {
 
-	@JsonProperty("industryIdentifiers")
-	private List<IndustryIdentifiersItem> industryIdentifiers;
+    @JsonProperty("industryIdentifiers")
+    private List<IndustryIdentifiersItem> industryIdentifiers;
 
-	@JsonProperty("pageCount")
-	private String pageCount;
+    @JsonProperty("pageCount")
+    private String pageCount;
 
-	@JsonProperty("printType")
-	private String printType;
+    @JsonProperty("printType")
+    private String printType;
 
-	@JsonProperty("previewLink")
-	private String previewLink;
+    @JsonProperty("previewLink")
+    private String previewLink;
 
-	@JsonProperty("canonicalVolumeLink")
-	private String canonicalVolumeLink;
+    @JsonProperty("canonicalVolumeLink")
+    private String canonicalVolumeLink;
 
-	@JsonProperty("description")
-	private String description;
+    @JsonProperty("description")
+    private String description;
 
-	@JsonProperty("language")
-	private String language;
+    @JsonProperty("language")
+    private String language;
 
-	@JsonProperty("title")
-	private String title;
+    @JsonProperty("title")
+    private String title;
 
-	@JsonProperty("imageLinks")
-	private ImageLinks imageLinks;
+    @JsonProperty("imageLinks")
+    private ImageLinks imageLinks;
 
-	@JsonProperty("subtitle")
-	private String subtitle;
+    @JsonProperty("subtitle")
+    private String subtitle;
 
-	@JsonProperty("averageRating")
-	private String averageRating;
+    @JsonProperty("averageRating")
+    private String averageRating;
 
-	@JsonProperty("mainCategory")
-	private String mainCategory;
+    @JsonProperty("mainCategory")
+    private String mainCategory;
 
-	@JsonProperty("publisher")
-	private String publisher;
+    @JsonProperty("publisher")
+    private String publisher;
 
-	@JsonProperty("ratingsCount")
-	private String ratingsCount;
+    @JsonProperty("ratingsCount")
+    private String ratingsCount;
 
-	@JsonProperty("publishedDate")
-	private String publishedDate;
+    @JsonProperty("publishedDate")
+    private String publishedDate;
 
-	@JsonProperty("categories")
-	private List<String> categories;
+    @JsonProperty("categories")
+    private List<String> categories;
 
-	@JsonProperty("contentVersion")
-	private String contentVersion;
+    @JsonProperty("contentVersion")
+    private String contentVersion;
 
-	@JsonProperty("authors")
-	private List<String> authors;
+    @JsonProperty("authors")
+    private List<String> authors;
 
-	@JsonProperty("dimensions")
-	private Dimensions dimensions;
+    @JsonProperty("dimensions")
+    private Dimensions dimensions;
 
-	@JsonProperty("infoLink")
-	private String infoLink;
+    @JsonProperty("infoLink")
+    private String infoLink;
 
-	public List<IndustryIdentifiersItem> getIndustryIdentifiers(){
-		return industryIdentifiers;
-	}
+    public List<IndustryIdentifiersItem> getIndustryIdentifiers() {
+        return industryIdentifiers;
+    }
 
-	public String getPageCount(){
-		return pageCount;
-	}
+    public String getPageCount() {
+        return pageCount;
+    }
 
-	public String getPrintType(){
-		return printType;
-	}
+    public String getPrintType() {
+        return printType;
+    }
 
-	public String getPreviewLink(){
-		return previewLink;
-	}
+    public String getPreviewLink() {
+        return previewLink;
+    }
 
-	public String getCanonicalVolumeLink(){
-		return canonicalVolumeLink;
-	}
+    public String getCanonicalVolumeLink() {
+        return canonicalVolumeLink;
+    }
 
-	public String getDescription(){
-		return description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getLanguage(){
-		return language;
-	}
+    public String getLanguage() {
+        return language;
+    }
 
-	public String getTitle(){
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public ImageLinks getImageLinks(){
-		return imageLinks;
-	}
+    public ImageLinks getImageLinks() {
+        return imageLinks;
+    }
 
-	public String getSubtitle(){
-		return subtitle;
-	}
+    public String getSubtitle() {
+        return subtitle;
+    }
 
-	public String getAverageRating(){
-		return averageRating;
-	}
+    public String getAverageRating() {
+        return averageRating;
+    }
 
-	public String getMainCategory(){
-		return mainCategory;
-	}
+    public String getMainCategory() {
+        return mainCategory;
+    }
 
-	public String getPublisher(){
-		return publisher;
-	}
+    public String getPublisher() {
+        return publisher;
+    }
 
-	public String getRatingsCount(){
-		return ratingsCount;
-	}
+    public String getRatingsCount() {
+        return ratingsCount;
+    }
 
-	public String getPublishedDate(){
-		return publishedDate;
-	}
+    public String getPublishedDate() {
+        return publishedDate;
+    }
 
-	public List<String> getCategories(){
-		return categories;
-	}
+    public List<String> getCategories() {
+        return categories;
+    }
 
-	public String getContentVersion(){
-		return contentVersion;
-	}
+    public String getContentVersion() {
+        return contentVersion;
+    }
 
-	public List<String> getAuthors(){
-		return authors;
-	}
+    public List<String> getAuthors() {
+        return authors;
+    }
 
-	public Dimensions getDimensions(){
-		return dimensions;
-	}
+    public Dimensions getDimensions() {
+        return dimensions;
+    }
 
-	public String getInfoLink(){
-		return infoLink;
-	}
+    public String getInfoLink() {
+        return infoLink;
+    }
 }

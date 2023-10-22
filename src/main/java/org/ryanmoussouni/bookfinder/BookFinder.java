@@ -5,5 +5,5 @@ import org.ryanmoussouni.bookfinder.domain.Book;
 import java.util.List;
 
 public interface BookFinder {
-    List<Book> find(QueryParameters params);
+    List<Book> findBookByTitle(String title) throws BookFindingException;
 }

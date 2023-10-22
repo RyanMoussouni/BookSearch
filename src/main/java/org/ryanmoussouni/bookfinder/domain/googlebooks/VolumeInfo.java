@@ -2,10 +2,6 @@ package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.ryanmoussouni.bookfinder.domain.googlebooks.ImageLinks;
-import org.ryanmoussouni.bookfinder.domain.googlebooks.IndustryIdentifiersItem;
-import org.ryanmoussouni.bookfinder.domain.googlebooks.PanelizationSummary;
-import org.ryanmoussouni.bookfinder.domain.googlebooks.ReadingModes;
 
 public class VolumeInfo{
 
@@ -13,19 +9,19 @@ public class VolumeInfo{
 	private List<IndustryIdentifiersItem> industryIdentifiers;
 
 	@JsonProperty("pageCount")
-	private int pageCount;
+	private String pageCount;
 
 	@JsonProperty("printType")
 	private String printType;
-
-	@JsonProperty("readingModes")
-	private ReadingModes readingModes;
 
 	@JsonProperty("previewLink")
 	private String previewLink;
 
 	@JsonProperty("canonicalVolumeLink")
 	private String canonicalVolumeLink;
+
+	@JsonProperty("description")
+	private String description;
 
 	@JsonProperty("language")
 	private String language;
@@ -36,32 +32,35 @@ public class VolumeInfo{
 	@JsonProperty("imageLinks")
 	private ImageLinks imageLinks;
 
-	@JsonProperty("averageRating")
-	private int averageRating;
+	@JsonProperty("subtitle")
+	private String subtitle;
 
-	@JsonProperty("panelizationSummary")
-	private PanelizationSummary panelizationSummary;
+	@JsonProperty("averageRating")
+	private String averageRating;
+
+	@JsonProperty("mainCategory")
+	private String mainCategory;
 
 	@JsonProperty("publisher")
 	private String publisher;
 
 	@JsonProperty("ratingsCount")
-	private int ratingsCount;
+	private String ratingsCount;
 
 	@JsonProperty("publishedDate")
 	private String publishedDate;
 
-	@JsonProperty("maturityRating")
-	private String maturityRating;
-
-	@JsonProperty("allowAnonLogging")
-	private boolean allowAnonLogging;
+	@JsonProperty("categories")
+	private List<String> categories;
 
 	@JsonProperty("contentVersion")
 	private String contentVersion;
 
 	@JsonProperty("authors")
 	private List<String> authors;
+
+	@JsonProperty("dimensions")
+	private Dimensions dimensions;
 
 	@JsonProperty("infoLink")
 	private String infoLink;
@@ -70,16 +69,12 @@ public class VolumeInfo{
 		return industryIdentifiers;
 	}
 
-	public int getPageCount(){
+	public String getPageCount(){
 		return pageCount;
 	}
 
 	public String getPrintType(){
 		return printType;
-	}
-
-	public ReadingModes getReadingModes(){
-		return readingModes;
 	}
 
 	public String getPreviewLink(){
@@ -88,6 +83,10 @@ public class VolumeInfo{
 
 	public String getCanonicalVolumeLink(){
 		return canonicalVolumeLink;
+	}
+
+	public String getDescription(){
+		return description;
 	}
 
 	public String getLanguage(){
@@ -102,19 +101,23 @@ public class VolumeInfo{
 		return imageLinks;
 	}
 
-	public int getAverageRating(){
+	public String getSubtitle(){
+		return subtitle;
+	}
+
+	public String getAverageRating(){
 		return averageRating;
 	}
 
-	public PanelizationSummary getPanelizationSummary(){
-		return panelizationSummary;
+	public String getMainCategory(){
+		return mainCategory;
 	}
 
 	public String getPublisher(){
 		return publisher;
 	}
 
-	public int getRatingsCount(){
+	public String getRatingsCount(){
 		return ratingsCount;
 	}
 
@@ -122,12 +125,8 @@ public class VolumeInfo{
 		return publishedDate;
 	}
 
-	public String getMaturityRating(){
-		return maturityRating;
-	}
-
-	public boolean isAllowAnonLogging(){
-		return allowAnonLogging;
+	public List<String> getCategories(){
+		return categories;
 	}
 
 	public String getContentVersion(){
@@ -136,6 +135,10 @@ public class VolumeInfo{
 
 	public List<String> getAuthors(){
 		return authors;
+	}
+
+	public Dimensions getDimensions(){
+		return dimensions;
 	}
 
 	public String getInfoLink(){

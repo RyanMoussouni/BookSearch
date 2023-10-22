@@ -23,13 +23,13 @@ public class AccessInfo{
 	private Epub epub;
 
 	@JsonProperty("publicDomain")
-	private boolean publicDomain;
+	private String publicDomain;
 
-	@JsonProperty("quoteSharingAllowed")
-	private boolean quoteSharingAllowed;
+	@JsonProperty("downloadAccess")
+	private DownloadAccess downloadAccess;
 
 	@JsonProperty("embeddable")
-	private boolean embeddable;
+	private String embeddable;
 
 	@JsonProperty("textToSpeechPermission")
 	private String textToSpeechPermission;
@@ -58,15 +58,15 @@ public class AccessInfo{
 		return epub;
 	}
 
-	public boolean isPublicDomain(){
+	public String getPublicDomain(){
 		return publicDomain;
 	}
 
-	public boolean isQuoteSharingAllowed(){
-		return quoteSharingAllowed;
+	public DownloadAccess getDownloadAccess(){
+		return downloadAccess;
 	}
 
-	public boolean isEmbeddable(){
+	public String getEmbeddable(){
 		return embeddable;
 	}
 

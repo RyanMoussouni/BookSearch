@@ -1,7 +1,10 @@
 package org.ryanmoussouni.bookfinder.domain.googlebooks;
 
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 
+@AllArgsConstructor
 public class Volumes {
     private String kind;
     private Integer totalItems;

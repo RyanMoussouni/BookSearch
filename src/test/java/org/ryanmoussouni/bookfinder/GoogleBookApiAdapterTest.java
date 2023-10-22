@@ -6,7 +6,6 @@ import org.ryanmoussouni.bookfinder.domain.googlebooks.Volume;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.VolumeInfo;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volumes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.mock;
@@ -18,7 +17,7 @@ class GoogleBookApiAdapterTest {
     void findBookByTitle_fetcherProvidesAListOfVolumes_returnsAListOfBooks() throws BookFetchingException {
         var fetcherMock = mock(VolumesFetcher.class);
         when(fetcherMock.performListVolumesRequest())
-            .thenReturn(createVolumeListFixture());
+                .thenReturn(createVolumeListFixture());
         var adapter = new GoogleBookApiAdapter(fetcherMock);
 
         try {

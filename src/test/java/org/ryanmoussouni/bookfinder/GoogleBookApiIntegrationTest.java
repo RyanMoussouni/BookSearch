@@ -74,4 +74,15 @@ public class GoogleBookApiIntegrationTest {
                 .uri(URI.create(uri))
                 .GET()
                 .build();
+
+        try {
+            var response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            var objectMapper = new ObjectMapper();
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            var volumes = objectMapper.readValue(response.body(), Volumes.class);
+        } catch (IOException | InterruptedException ie) {
+            ie.printStackTrace();
+            Assertions.fail();
+        }
+    }
 }

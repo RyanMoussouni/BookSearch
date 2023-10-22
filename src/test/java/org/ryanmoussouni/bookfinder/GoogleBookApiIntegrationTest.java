@@ -26,7 +26,7 @@ public class GoogleBookApiIntegrationTest {
     }
 
     @Test
-    void search_volumeById_returnsTheVolume() {
+    void get_volumeById_returnsTheVolume() {
         var expected = HttpStatus.OK;
         HttpStatus actual = null;
         var resourcePath = String.format("%s/%s", GOOGLE_BOOK_API_URI, PRICE_AND_PREJUDICE_VOLUME_ID);

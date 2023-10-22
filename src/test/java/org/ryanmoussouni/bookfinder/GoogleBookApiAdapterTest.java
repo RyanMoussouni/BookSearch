@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volume;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.VolumeInfo;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volumes;
+import org.ryanmoussouni.bookfinder.exception.BookFetchingException;
+import org.ryanmoussouni.bookfinder.exception.BookFindingException;
 
 import java.util.List;
 

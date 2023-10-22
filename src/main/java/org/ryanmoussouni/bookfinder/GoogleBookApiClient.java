@@ -2,6 +2,7 @@ package org.ryanmoussouni.bookfinder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volumes;
+import org.ryanmoussouni.bookfinder.exception.BookFetchingException;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

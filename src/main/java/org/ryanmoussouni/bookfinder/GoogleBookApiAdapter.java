@@ -3,6 +3,8 @@ package org.ryanmoussouni.bookfinder;
 import lombok.AllArgsConstructor;
 import org.ryanmoussouni.bookfinder.domain.Book;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volume;
+import org.ryanmoussouni.bookfinder.exception.BookFetchingException;
+import org.ryanmoussouni.bookfinder.exception.BookFindingException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

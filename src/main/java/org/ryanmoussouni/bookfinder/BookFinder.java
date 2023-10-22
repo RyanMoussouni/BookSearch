@@ -1,6 +1,7 @@
 package org.ryanmoussouni.bookfinder;
 
 import org.ryanmoussouni.bookfinder.domain.Book;
+import org.ryanmoussouni.bookfinder.exception.BookFindingException;
 
 import java.util.List;
 

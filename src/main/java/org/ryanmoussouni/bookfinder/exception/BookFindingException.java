@@ -1,4 +1,4 @@
-package org.ryanmoussouni.bookfinder;
+package org.ryanmoussouni.bookfinder.exception;
 
 public class BookFindingException extends Throwable {
     public BookFindingException(String message, BookFetchingException e) {

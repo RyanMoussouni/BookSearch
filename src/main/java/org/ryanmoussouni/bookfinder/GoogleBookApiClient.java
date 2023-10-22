@@ -28,10 +28,10 @@ public class GoogleBookApiClient implements VolumesFetcher {
                 .uri(URI.create(uri))
                 .GET()
                 .build();
-        var objectMapper = new ObjectMapper();
 
         try {
             var response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            var objectMapper = new ObjectMapper();
             return objectMapper.readValue(response.body(), Volumes.class);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

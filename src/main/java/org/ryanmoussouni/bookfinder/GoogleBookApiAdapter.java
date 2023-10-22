@@ -1,11 +1,15 @@
 package org.ryanmoussouni.bookfinder;
 
+import lombok.AllArgsConstructor;
 import org.ryanmoussouni.bookfinder.domain.Book;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volume;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
+@Component
 public class GoogleBookApiAdapter implements BookFinder {
     private VolumesFetcher googleApiClient;
 

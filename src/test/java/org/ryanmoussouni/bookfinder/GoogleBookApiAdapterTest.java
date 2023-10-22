@@ -1,5 +1,6 @@
 package org.ryanmoussouni.bookfinder;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.Volume;
 import org.ryanmoussouni.bookfinder.domain.googlebooks.VolumeInfo;
@@ -18,6 +19,13 @@ class GoogleBookApiAdapterTest {
         var fetcherMock = mock(VolumesFetcher.class);
         when(fetcherMock.performListVolumesRequest())
             .thenReturn(createVolumeListFixture());
+        var adapter = new GoogleBookApiAdapter(fetcherMock);
+
+        try {
+            var books = adapter.findBookByTitle("Duplantis, the making of a champion");
+        } catch (BookFindingException e) {
+            Assertions.fail();
+        }
     }
 
     private Volumes createVolumeListFixture() {
